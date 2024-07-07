@@ -1,6 +1,8 @@
-/************************************************************************************************************/
+/*
+//  VALUES AND VARIABLES
+/!************************************************************************************************************!/
 
-/*  Exercise 1: Variable Declaration and Assignment */
+/!*  Exercise 1: Variable Declaration and Assignment *!/
 console.log("\x1b[32m%s\x1b[0m","Exercise 1: Variable Declaration and Assignment");
 
 //  Declare a variable name and assign it your name as a string.
@@ -14,9 +16,9 @@ console.log(myName);
 console.log(myAge);
 console.log(isStudent);
 
-/************************************************************************************************************/
+/!************************************************************************************************************!/
 
-/*  Exercise 2: Variable Reassignment   */
+/!*  Exercise 2: Variable Reassignment   *!/
 console.log("\x1b[32m%s\x1b[0m","Exercise 2: Variable Reassignment");
 
 //  Declare a variable favoriteColor and assign it your favorite color as a string.
@@ -28,9 +30,9 @@ favoriteColor = "white";
 //  Log the new value of favoriteColor to the console.
 console.log(favoriteColor);
 
-/************************************************************************************************************/
+/!************************************************************************************************************!/
 
-/*  Exercise 3: Working with Different Data Types   */
+/!*  Exercise 3: Working with Different Data Types   *!/
 console.log("\x1b[32m%s\x1b[0m","Exercise 3: Working with Different Data Types");
 
 //  Declare a variable height and assign it your height in meters as a number.
@@ -44,9 +46,9 @@ console.log(typeof(height));
 console.log(typeof(fullName));
 console.log(typeof(isEmployed));
 
-/************************************************************************************************************/
+/!************************************************************************************************************!/
 
-/*  Exercise 4: Basic Arithmetic Operations */
+/!*  Exercise 4: Basic Arithmetic Operations *!/
 console.log("\x1b[32m%s\x1b[0m","Exercise 4: Basic Arithmetic Operations");
 
 // Declare two variables num1 and num2 and assign them any two numbers.
@@ -63,9 +65,9 @@ console.log(difference);
 console.log(product);
 console.log(quotient);
 
-/************************************************************************************************************/
+/!************************************************************************************************************!/
 
-/*  Exercise 5: String Concatenation */
+/!*  Exercise 5: String Concatenation *!/
 console.log("\x1b[32m%s\x1b[0m","Exercise 5: String Concatenation");
 
 // Declare two variables firstName and lastName and assign them your first name and last name as strings.
@@ -76,9 +78,9 @@ const completeName = firstName + " " + lastName;
 // Log the full name to the console.
 console.log(completeName);
 
-/************************************************************************************************************/
+/!************************************************************************************************************!/
 
-/*  Exercise 6: Template Literals */
+/!*  Exercise 6: Template Literals *!/
 console.log("\x1b[32m%s\x1b[0m","Exercise 6: Template Literals");
 
 // Use template literals to create a sentence that includes your name, age, and favorite color.
@@ -88,9 +90,9 @@ console.log(
     `Favorite color: ${favoriteColor}`);
 // Log the sentence to the console.
 
-/************************************************************************************************************/
+/!************************************************************************************************************!/
 
-/*  Exercise 7: Boolean Logic */
+/!*  Exercise 7: Boolean Logic *!/
 console.log("\x1b[32m%s\x1b[0m","Exercise 7: Boolean Logic");
 
 // Declare two boolean variables hasDrivingLicense and hasCar.
@@ -100,9 +102,9 @@ const hasCar = true;
 const canDrive = (hasDrivingLicense === true && hasCar === true);
 // Log the result to the console.
 console.log(`It is ${canDrive} that he can drive !`);
-/************************************************************************************************************/
+/!************************************************************************************************************!/
 
-/*  Exercise 8: Constants */
+/!*  Exercise 8: Constants *!/
 console.log("\x1b[32m%s\x1b[0m","Exercise 8: Constants");
 
 // Declare a constant PI and assign it the value of 3.14159.
@@ -112,9 +114,9 @@ const PI = 3.14159;
 // Log the value of PI to the console.
 console.log(PI);
 
-/************************************************************************************************************/
+/!************************************************************************************************************!/
 
-/*  Exercise 9: Type Conversion */
+/!*  Exercise 9: Type Conversion *!/
 console.log("\x1b[32m%s\x1b[0m","Exercise 9: Type Conversion");
 
 // Declare a variable numberString and assign it a numeric value as a string (e.g., "123").
@@ -126,10 +128,10 @@ let numberNumber = Number(numberString);
 console.log(typeof(numberString));
 console.log(typeof(numberNumber));
 
-/************************************************************************************************************/
+/!************************************************************************************************************!/
 
-/*  Exercise 10: Null and Undefined */
-console.log("\x1b[32m%s\x1b[0m","Exercise 10: Null and Undefined");
+/!*  Exercise 10: Null and Undefined *!/
+// console.log("\x1b[32m%s\x1b[0m","Exercise 10: Null and Undefined");
 
 // Declare a variable emptyValue and assign it the value null.
 const emptyValue = null;
@@ -140,3 +142,40 @@ console.log(emptyValue);
 console.log(undefinedValue);
 console.log(typeof(emptyValue));
 console.log(typeof(undefinedValue));
+*/
+
+// DATA TYPES
+/************************************************************************************************************/
+
+/*  Exercise 1: Identifying Data Types */
+console.log("\x1b[32m%s\x1b[0m","Exercise 1: Identifying Data Types");
+
+//  Write a function that takes a value and returns a string indicating its data type.
+function indicateDataType(value) {
+    return typeof value;
+}
+console.log(indicateDataType(25));
+console.log(indicateDataType("爱"));
+console.log(indicateDataType(true));
+console.log(indicateDataType(undefined));
+console.log(indicateDataType(null));
+
+/************************************************************************************************************/
+
+/*  Ejercicio 2: Conversión de Tipos de Datos*/
+console.log("\x1b[32m%s\x1b[0m","Ejercicio 2: Conversión de Tipos de Datos");
+
+//  Escribe una función que convierta una cadena a número y un número a cadena.
+function toStoNandtoNtoS(value){
+    if(typeof value === "string"){
+        return Number(value);
+    } else if (typeof value === "number") {
+        return value.toString();
+    } else {
+        return "Not a string nor a number"
+    }
+}
+
+console.log(toStoNandtoNtoS(25));
+console.log(toStoNandtoNtoS("25"));
+console.log(toStoNandtoNtoS(undefined));
